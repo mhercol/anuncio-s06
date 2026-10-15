@@ -79,6 +79,11 @@
   .book h2 { color: #fff; margin-bottom: 10px; }
   .book p { margin: 0 0 6px; font-size: 17px; }
   .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .steps { list-style: none; counter-reset: s; margin: 12px 0 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 38px; margin: 0 0 12px; font-size: 16px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; color: var(--sea); font: 700 14px/26px var(--sans); text-align: center; }
+  .steps .contact { display: block; margin: 6px 0 0; }
   .book .aside { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.3); font-size: 15px; opacity: .95; }
   .book .aside a { color: #fff; font-style: normal; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); overflow-wrap: anywhere; }
   .more { margin: 0; }
@@ -133,6 +138,9 @@
     .book h2 { margin-bottom: 6px; }
     .book p { font-size: 14.5px; margin-bottom: 4px; }
     .book .contact { font-size: 16px; margin: 6px 0 8px; }
+    .steps { margin-top: 6px; }
+    .steps li { font-size: 14px; margin-bottom: 7px; padding-left: 32px; }
+    .steps li::before { width: 22px; height: 22px; font-size: 12px; line-height: 22px; }
     .book .aside { font-size: 13.5px; margin-top: 10px; padding-top: 9px; }
     .tag { padding: 12px 18px; }
     .note, .amen > div { break-inside: avoid; }
@@ -219,15 +227,18 @@
     <div class="book">
       <div>
         <h2>How to book</h2>
-        <p>Availability and bookings are handled by <b>Obsidian</b>, the external company that manages the rental:</p>
-        <p class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Booking%20S06%20-%20referred%20by%20Miguel">info@obsidianvacationrentals.com</a><br>
-          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></p>
-        <p>Ask specifically for <b>apartment S06</b> and say you were <b>referred by Miguel</b>. The apartments in the complex are not all the same, and Obsidian allocates one unless a specific unit is requested.</p>
+        <ol class="steps">
+          <li><b>Contact Obsidian</b>, the external company that handles availability and bookings:
+            <span class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Booking%20S06%20-%20referred%20by%20Miguel">info@obsidianvacationrentals.com</a><br>
+          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></span></li>
+          <li><b>Ask specifically for apartment S06.</b> Otherwise Obsidian may allocate a different apartment in the complex, not the one in this ad.</li>
+          <li><b>Say you were referred by Miguel.</b></li>
+        </ol>
         <p class="aside">Further information about the apartment: Miguel, <a href="mailto:miguel.herrero-collantes@eeas.europa.eu?subject=Apartment%20S06">miguel.herrero-collantes@eeas.europa.eu</a></p>
       </div>
       <div>
-        <div class="tag"><small>Referred by</small><strong>Miguel</strong></div>
         <div class="tag"><small>Apartment</small><strong>S06</strong></div>
+        <div class="tag"><small>Referred by</small><strong>Miguel</strong></div>
       </div>
     </div>
 

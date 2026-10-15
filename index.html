@@ -79,6 +79,11 @@
   .book h2 { color: #fff; margin-bottom: 10px; }
   .book p { margin: 0 0 6px; font-size: 17px; }
   .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .steps { list-style: none; counter-reset: s; margin: 12px 0 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 38px; margin: 0 0 12px; font-size: 16px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; color: var(--sea); font: 700 14px/26px var(--sans); text-align: center; }
+  .steps .contact { display: block; margin: 6px 0 0; }
   .book .aside { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.3); font-size: 15px; opacity: .95; }
   .book .aside a { color: #fff; font-style: normal; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); overflow-wrap: anywhere; }
   .more { margin: 0; }
@@ -133,6 +138,9 @@
     .book h2 { margin-bottom: 6px; }
     .book p { font-size: 14.5px; margin-bottom: 4px; }
     .book .contact { font-size: 16px; margin: 6px 0 8px; }
+    .steps { margin-top: 6px; }
+    .steps li { font-size: 14px; margin-bottom: 7px; padding-left: 32px; }
+    .steps li::before { width: 22px; height: 22px; font-size: 12px; line-height: 22px; }
     .book .aside { font-size: 13.5px; margin-top: 10px; padding-top: 9px; }
     .tag { padding: 12px 18px; }
     .note, .amen > div { break-inside: avoid; }
@@ -219,15 +227,18 @@
     <div class="book">
       <div>
         <h2>Cómo reservar</h2>
-        <p>La disponibilidad y las reservas las gestiona <b>Obsidian</b>, la empresa externa que lleva el alquiler:</p>
-        <p class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Reserva%20S06%20-%20de%20parte%20de%20Miguel">info@obsidianvacationrentals.com</a><br>
-          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></p>
-        <p>Pide expresamente el <b>apartamento S06</b> y di que vienes <b>de parte de Miguel</b>. Los apartamentos del complejo no son todos iguales y Obsidian los asigna si no se pide uno concreto.</p>
+        <ol class="steps">
+          <li><b>Escribe a Obsidian</b>, la empresa externa que gestiona la disponibilidad y las reservas:
+            <span class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Reserva%20S06%20-%20de%20parte%20de%20Miguel">info@obsidianvacationrentals.com</a><br>
+          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></span></li>
+          <li><b>Pide expresamente el apartamento S06.</b> Si no, Obsidian puede asignarte otro apartamento del complejo, distinto al de este anuncio.</li>
+          <li><b>Di que vienes de parte de Miguel.</b></li>
+        </ol>
         <p class="aside">Información adicional sobre el apartamento: Miguel, <a href="mailto:miguel.herrero-collantes@eeas.europa.eu?subject=Apartamento%20S06">miguel.herrero-collantes@eeas.europa.eu</a></p>
       </div>
       <div>
-        <div class="tag"><small>De parte de</small><strong>Miguel</strong></div>
         <div class="tag"><small>Apartamento</small><strong>S06</strong></div>
+        <div class="tag"><small>De parte de</small><strong>Miguel</strong></div>
       </div>
     </div>
 
