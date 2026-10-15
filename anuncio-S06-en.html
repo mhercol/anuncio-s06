@@ -79,6 +79,8 @@
   .book h2 { color: #fff; margin-bottom: 10px; }
   .book p { margin: 0 0 6px; font-size: 17px; }
   .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .book .aside { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.3); font-size: 15px; font-style: italic; opacity: .95; }
+  .book .aside span { font-style: normal; font-weight: 600; white-space: nowrap; }
   .book .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); }
   .tag { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); border-radius: 14px; padding: 18px 22px; text-align: center; min-width: 190px; }
   .tag small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
@@ -122,10 +124,15 @@
     .gallery { grid-auto-rows: 25.5mm; gap: 3mm; }
     .amen li { padding: 1px 0 1px 16px; }
     .amen li::before { top: 9px; }
-    .book { margin-top: 7mm; padding: 7mm 10mm; break-inside: avoid; }
+    .book { margin-top: 6mm; padding: 6mm 10mm; break-inside: avoid; }
     .page .cols { padding-top: 7mm; }
+    .book h2 { margin-bottom: 6px; }
+    .book p { font-size: 14.5px; margin-bottom: 4px; }
+    .book .contact { font-size: 16px; margin: 6px 0 8px; }
+    .book .aside { font-size: 13.5px; margin-top: 10px; padding-top: 9px; }
+    .tag { padding: 12px 18px; }
     .note, .amen > div { break-inside: avoid; }
-    footer { padding: 7mm 0 0; }
+    footer { padding: 4mm 0 0; }
     .lang { display: none; }
   }
 </style>
@@ -247,10 +254,11 @@
     <div class="book">
       <div>
         <h2>How to book</h2>
-        <p>Book directly with <b>Obsidian</b>, the external company that manages the rental:</p>
+        <p>Availability and bookings are handled by <b>Obsidian</b>, the external company that manages the rental:</p>
         <p class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Booking%20S06%20-%20referred%20by%20Miguel">info@obsidianvacationrentals.com</a><br>
           <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></p>
         <p>Say you were <b>referred by Miguel</b> and that you are interested in <b>apartment S06</b>.</p>
+        <p class="aside">Questions about the apartment before booking? Just ask me, happy to help. <span>— Miguel</span></p>
       </div>
       <div>
         <div class="tag"><small>Referred by</small><strong>Miguel</strong></div>
