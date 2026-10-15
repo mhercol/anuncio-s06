@@ -110,6 +110,9 @@
     .facts { grid-template-columns: repeat(2, 1fr); }
     .cols, .amen, .book { grid-template-columns: 1fr; }
     .book { padding: 28px 22px; }
+    .book > div { min-width: 0; }
+    .book .contact { font-size: 16px; }
+    .book .contact a { overflow-wrap: anywhere; }
     .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
     .g-salon, .g-cocina, .g-dorm1, .g-dorm2, .g-terraza { grid-column: span 2; grid-row: span 2; }
     .g-salon { grid-row: span 3; }
