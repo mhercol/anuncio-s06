@@ -79,7 +79,8 @@
     display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
   .book h2 { color: #fff; margin-bottom: 10px; }
   .book p { margin: 0 0 6px; font-size: 17px; }
-  .book .fill { background: #fff; color: var(--sea); font-weight: 600; padding: 2px 10px; border-radius: 6px; white-space: nowrap; }
+  .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .book .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); }
   .tag { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); border-radius: 14px; padding: 18px 22px; text-align: center; min-width: 190px; }
   .tag small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
   .tag strong { display: block; font: 600 26px/1.25 var(--serif); }
@@ -241,11 +242,13 @@
     <div class="book">
       <div>
         <h2>Cómo reservar</h2>
-        <p>La reserva se hace con <b>Obsidian</b>, la gestora del apartamento, en <span class="fill">[&nbsp;&nbsp;&nbsp;]</span>.</p>
-        <p>Haz la reserva <b>a nombre de Miguel</b> e indica que es para el <b>apartamento S06</b>.</p>
+        <p>La reserva se hace directamente con <b>Obsidian</b>, la gestora del apartamento:</p>
+        <p class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Reserva%20S06%20-%20de%20parte%20de%20Miguel">info@obsidianvacationrentals.com</a><br>
+          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></p>
+        <p>Di que vienes <b>de parte de Miguel</b> y que te interesa el <b>apartamento S06</b>.</p>
       </div>
       <div>
-        <div class="tag"><small>A nombre de</small><strong>Miguel</strong></div>
+        <div class="tag"><small>De parte de</small><strong>Miguel</strong></div>
         <div class="tag"><small>Apartamento</small><strong>S06</strong></div>
       </div>
     </div>
