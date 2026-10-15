@@ -86,6 +86,11 @@
   .tag strong { display: block; font: 600 26px/1.25 var(--serif); }
   .tag + .tag { margin-top: 10px; }
 
+  .lang { position: absolute; top: 18px; right: 20px; z-index: 2; display: flex; gap: 4px;
+    background: rgba(0,0,0,.35); border-radius: 999px; padding: 4px; font: 600 13px/1 var(--sans); }
+  .lang a, .lang span { color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 999px; }
+  .lang span { background: #fff; color: var(--ink); }
+
   footer { padding: 36px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
 
   @media (max-width: 760px) {
@@ -119,12 +124,14 @@
     .book { margin-top: 9mm; padding: 9mm 10mm; break-inside: avoid; }
     .note, .amen > div { break-inside: avoid; }
     footer { padding: 7mm 0 0; }
+    .lang { display: none; }
   }
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <nav class="lang" aria-label="Idioma"><span>ES</span><a href="en.html" hreflang="en" lang="en">EN</a></nav>
   <img src="img/terraza-piscina.jpg" alt="Terraza privada del apartamento con vistas a la piscina de Granada Park">
   <div class="hero-text">
     <div class="wrap">

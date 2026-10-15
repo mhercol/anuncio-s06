@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartment S06 · Granada Park</title>
+<meta name="description" content="2-bedroom, 2-bathroom apartment with a private terrace and direct pool access in the Granada Park complex, south Tenerife. Holiday rental.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f7f2ea;
+    --paper: #fffdf9;
+    --ink: #2b2723;
+    --muted: #6f665c;
+    --line: #e6ddd0;
+    --sea: #1f6f8b;
+    --sea-soft: #e3f0f4;
+    --terra: #c0643d;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: var(--sand); color: var(--ink); font: 16px/1.6 var(--sans); }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Portada */
+  .hero { position: relative; height: min(78vh, 640px); min-height: 420px; overflow: hidden; background: #333; }
+  .hero img { object-position: 55% 45%; }
+  .hero::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.05) 35%, rgba(0,0,0,.62) 100%); }
+  .hero-text { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; color: #fff; padding-bottom: 40px; }
+  .eyebrow { font: 600 13px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; opacity: .92; margin: 0 0 14px; }
+  h1 { font: 600 clamp(36px, 6vw, 64px)/1.05 var(--serif); margin: 0 0 12px; letter-spacing: -.01em; }
+  .hero p.sub { font-size: clamp(16px, 2.2vw, 20px); margin: 0; max-width: 34em; opacity: .95; }
+
+  /* Datos rápidos */
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin: -34px auto 0; position: relative; z-index: 2;
+    box-shadow: 0 10px 30px rgba(60,40,20,.10); }
+  .fact { background: var(--paper); padding: 18px 16px; text-align: center; }
+  .fact b { display: block; font: 600 22px/1.2 var(--serif); color: var(--sea); }
+  .fact span { font-size: 13px; color: var(--muted); }
+
+  section { padding: 56px 0 0; }
+  h2 { font: 600 30px/1.2 var(--serif); margin: 0 0 18px; }
+  h3 { font: 600 13px/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--terra); margin: 0 0 10px; }
+  .lead { font-size: 18px; }
+  .cols { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: start; }
+  .note { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; }
+  .note ul { margin: 0; padding-left: 18px; }
+  .note li { margin: 4px 0; }
+
+  /* Galería */
+  .gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 150px; gap: 10px; }
+  .gallery figure { margin: 0; position: relative; border-radius: 10px; overflow: hidden; background: #ddd; }
+  .gallery figcaption { position: absolute; left: 10px; bottom: 10px; background: rgba(255,253,249,.92); color: var(--ink);
+    font-size: 12px; font-weight: 500; padding: 4px 9px; border-radius: 999px; }
+  .g-salon   { grid-column: span 2; grid-row: span 3; }
+  .g-dorm1   { grid-column: span 2; grid-row: span 3; }
+  .g-cocina2 { grid-column: span 2; grid-row: span 3; }
+  .g-dorm2   { grid-column: span 3; grid-row: span 2; }
+  .g-cocina  { grid-column: span 3; grid-row: span 2; }
+  .g-terraza { grid-column: span 6; grid-row: span 3; }
+  .g-terraza img { object-position: 50% 70%; }
+
+  /* Equipamiento */
+  .amen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .amen .note { padding: 18px 20px; }
+  .amen ul { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+  .amen li { padding: 3px 0 3px 18px; position: relative; }
+  .amen li::before { content: ""; position: absolute; left: 2px; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--sea); }
+
+  /* Reserva */
+  .book { margin: 56px 0 0; background: var(--sea); color: #fff; border-radius: 18px; padding: 36px 40px;
+    display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+  .book h2 { color: #fff; margin-bottom: 10px; }
+  .book p { margin: 0 0 6px; font-size: 17px; }
+  .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .book .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); }
+  .tag { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); border-radius: 14px; padding: 18px 22px; text-align: center; min-width: 190px; }
+  .tag small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+  .tag strong { display: block; font: 600 26px/1.25 var(--serif); }
+  .tag + .tag { margin-top: 10px; }
+
+  .lang { position: absolute; top: 18px; right: 20px; z-index: 2; display: flex; gap: 4px;
+    background: rgba(0,0,0,.35); border-radius: 999px; padding: 4px; font: 600 13px/1 var(--sans); }
+  .lang a, .lang span { color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 999px; }
+  .lang span { background: #fff; color: var(--ink); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 16px; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .cols, .amen, .book { grid-template-columns: 1fr; }
+    .book { padding: 28px 22px; }
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
+    .g-salon, .g-dorm1, .g-cocina2 { grid-column: span 1; grid-row: span 3; }
+    .g-dorm2, .g-cocina, .g-terraza { grid-column: span 2; grid-row: span 2; }
+    .g-cocina2 { display: none; }
+  }
+
+  /* PDF / impresión: A4, tres páginas */
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: var(--paper); font-size: 14px; }
+    .wrap { max-width: none; padding: 0 16mm; }
+    .hero { height: 140mm; min-height: 0; }
+    .hero-text { padding-bottom: 22mm; }
+    h1 { font-size: 44px; }
+    .facts { margin-top: -12mm; box-shadow: none; }
+    section { padding-top: 10mm; }
+    h2 { font-size: 24px; margin-bottom: 10px; }
+    .lead { font-size: 16px; }
+    .cols { gap: 9mm; }
+    .page { break-before: page; padding-top: 12mm; }
+    .gallery { grid-auto-rows: 28.5mm; gap: 3mm; }
+    .amen li { padding: 1px 0 1px 16px; }
+    .amen li::before { top: 9px; }
+    .book { margin-top: 9mm; padding: 9mm 10mm; break-inside: avoid; }
+    .note, .amen > div { break-inside: avoid; }
+    footer { padding: 7mm 0 0; }
+    .lang { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="lang" aria-label="Language"><a href="index.html" hreflang="es" lang="es">ES</a><span>EN</span></nav>
+  <img src="img/terraza-piscina.jpg" alt="The apartment's private terrace overlooking the Granada Park pool">
+  <div class="hero-text">
+    <div class="wrap">
+      <p class="eyebrow">Holiday rental · South Tenerife</p>
+      <h1>Apartment S06<br>at Granada Park</h1>
+      <p class="sub">A bright two-bedroom apartment with a private terrace and direct access to the pool.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="facts">
+    <div class="fact"><b>2</b><span>bedrooms</span></div>
+    <div class="fact"><b>2</b><span>full bathrooms</span></div>
+    <div class="fact"><b>Terrace</b><span>private, with direct pool access</span></div>
+    <div class="fact"><b>Accessible</b><span>adapted for reduced mobility</span></div>
+  </div>
+
+  <section class="cols">
+    <div>
+      <h2>Your home in the south of Tenerife</h2>
+      <p class="lead">A cosy, bright two-bedroom apartment in the Granada Park complex, one of the most sought-after areas in the south of Tenerife. It stands out for its layout, space and comfort: ideal for a relaxing holiday.</p>
+      <p>It has two spacious bedrooms, one with a built-in wardrobe, two full bathrooms, a fully equipped kitchen and a bright living room that opens onto a pleasant private terrace with direct access to the pool, perfect for relaxing and enjoying the island's climate all year round.</p>
+      <p>Its location gives easy access to restaurants, shops and some of the best beaches in the south of the island.</p>
+    </div>
+    <div class="note">
+      <h3>The complex</h3>
+      <ul>
+        <li>Large adult pool and a separate children's pool</li>
+        <li>Beautifully kept gardens</li>
+        <li>Mini golf</li>
+        <li>Games area with billiards and table tennis</li>
+        <li>Sun terrace</li>
+        <li>24-hour reception</li>
+        <li>Quiet, family-friendly atmosphere</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>The apartment</h2>
+    <div class="gallery">
+      <figure class="g-salon"><img src="img/salon.jpg" alt="Living and dining room with sofa and table"><figcaption>Living room</figcaption></figure>
+      <figure class="g-dorm1"><img src="img/dormitorio-1.jpg" alt="Main bedroom with built-in wardrobe"><figcaption>Bedroom 1</figcaption></figure>
+      <figure class="g-cocina2"><img src="img/cocina-2.jpg" alt="Kitchen with fridge and microwave"><figcaption>Kitchen</figcaption></figure>
+      <figure class="g-dorm2"><img src="img/dormitorio-2.jpg" alt="Second bedroom with two beds"><figcaption>Bedroom 2</figcaption></figure>
+      <figure class="g-cocina"><img src="img/cocina.jpg" alt="Equipped kitchen with oven and hob"><figcaption>Equipped kitchen</figcaption></figure>
+      <figure class="g-terraza"><img src="img/terraza.jpg" alt="Private terrace with table and chairs and direct pool access"><figcaption>Private terrace</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>Amenities and services</h2>
+    <div class="amen">
+      <div class="note">
+        <h3>In the apartment</h3>
+        <ul>
+          <li>Bed linen and towels</li>
+          <li>Hairdryer</li>
+          <li>Equipped kitchen, fridge and coffee maker</li>
+          <li>Cot and high chair</li>
+          <li>First aid kit and fire extinguisher</li>
+          <li>Private terrace</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h3>Services</h3>
+        <ul>
+          <li>24-hour reception</li>
+          <li>Lift</li>
+          <li>Airport transfer</li>
+          <li>Car hire</li>
+          <li>Luggage storage</li>
+          <li>Long stays welcome</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h3>Nearby</h3>
+        <ul>
+          <li>Beaches</li>
+          <li>Water park</li>
+          <li>Mountain walks</li>
+          <li>Paragliding, hang gliding and skydiving</li>
+          <li>Hot-air balloon rides</li>
+          <li>Cinemas</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="cols">
+      <div class="note">
+        <h3>Check-in and check-out</h3>
+        <ul>
+          <li><b>Check-in:</b> 15:00 to 00:00</li>
+          <li><b>Check-out:</b> by 12:00</li>
+        </ul>
+        <h3 style="margin-top:18px">Rental management</h3>
+        <p style="margin:0">The rental is managed by an external company, Obsidian Vacation Rentals. Their booking, payment and cancellation terms apply.</p>
+      </div>
+      <div class="note">
+        <h3>House rules</h3>
+        <ul>
+          <li>Family friendly</li>
+          <li>Adapted for guests with reduced mobility</li>
+          <li>No smoking</li>
+          <li>No pets</li>
+          <li>No parties or stag/hen parties</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="book">
+      <div>
+        <h2>How to book</h2>
+        <p>Book directly with <b>Obsidian</b>, the external company that manages the rental:</p>
+        <p class="contact"><a href="mailto:info@obsidianvacationrentals.com?subject=Booking%20S06%20-%20referred%20by%20Miguel">info@obsidianvacationrentals.com</a><br>
+          <a href="https://wa.me/34613078714">WhatsApp +34 613 078 714</a></p>
+        <p>Say you were <b>referred by Miguel</b> and that you are interested in <b>apartment S06</b>.</p>
+      </div>
+      <div>
+        <div class="tag"><small>Referred by</small><strong>Miguel</strong></div>
+        <div class="tag"><small>Apartment</small><strong>S06</strong></div>
+      </div>
+    </div>
+
+    <footer>Apartment S06 · Granada Park complex · South Tenerife</footer>
+  </section>
+</main>
+
+</body>
+</html>
