@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holiday rental · Los Cristianos</title>
+<meta name="description" content="2-bedroom, 1-bathroom apartment with a private terrace and direct pool access in the Granada Park complex, south Tenerife. Holiday rental.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f7f2ea;
+    --paper: #fffdf9;
+    --ink: #2b2723;
+    --muted: #6f665c;
+    --line: #e6ddd0;
+    --sea: #1f6f8b;
+    --sea-soft: #e3f0f4;
+    --terra: #c0643d;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: var(--sand); color: var(--ink); font: 16px/1.6 var(--sans); }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Portada */
+  .hero { position: relative; height: min(78vh, 640px); min-height: 420px; overflow: hidden; background: #333; }
+  .hero img { object-position: 55% 45%; }
+  .hero::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.05) 35%, rgba(0,0,0,.62) 100%); }
+  .hero-text { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; color: #fff; padding-bottom: 40px; }
+  .eyebrow { font: 600 13px/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; opacity: .92; margin: 0 0 14px; }
+  h1 { font: 600 clamp(36px, 6vw, 64px)/1.05 var(--serif); margin: 0 0 12px; letter-spacing: -.01em; }
+  .hero p.sub { font-size: clamp(16px, 2.2vw, 20px); margin: 0; max-width: 34em; opacity: .95; }
+
+  /* Datos rápidos */
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin: -34px auto 0; position: relative; z-index: 2;
+    box-shadow: 0 10px 30px rgba(60,40,20,.10); }
+  .fact { background: var(--paper); padding: 18px 16px; text-align: center; }
+  .fact b { display: block; font: 600 22px/1.2 var(--serif); color: var(--sea); }
+  .fact span { font-size: 13px; color: var(--muted); }
+
+  section { padding: 56px 0 0; }
+  h2 { font: 600 30px/1.2 var(--serif); margin: 0 0 18px; }
+  h3 { font: 600 13px/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--terra); margin: 0 0 10px; }
+  .lead { font-size: 18px; }
+  .cols { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: start; }
+  .page .cols { align-items: stretch; }
+  .note { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; }
+  .note ul { margin: 0; padding-left: 18px; }
+  .note li { margin: 4px 0; }
+
+  /* Galería */
+  .gallery { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 150px; gap: 10px; }
+  .gallery figure { margin: 0; position: relative; border-radius: 10px; overflow: hidden; background: #ddd; }
+  .gallery figcaption { position: absolute; left: 10px; bottom: 10px; background: rgba(255,253,249,.92); color: var(--ink);
+    font-size: 12px; font-weight: 500; padding: 4px 9px; border-radius: 999px; }
+  .g-salon   { grid-column: span 6; grid-row: span 3; }
+  .g-cocina  { grid-column: span 6; grid-row: span 3; }
+  .g-dorm1   { grid-column: span 4; grid-row: span 3; }
+  .g-dorm2   { grid-column: span 8; grid-row: span 3; }
+  .g-terraza { grid-column: span 12; grid-row: span 3; }
+  .g-terraza img { object-position: 50% 70%; }
+
+  /* Equipamiento */
+  .amen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .amen .note { padding: 18px 20px; }
+  .amen ul { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+  .amen li { padding: 3px 0 3px 18px; position: relative; }
+  .amen li::before { content: ""; position: absolute; left: 2px; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--sea); }
+
+  /* Reserva */
+  .book { margin: 56px 0 0; background: var(--sea); color: #fff; border-radius: 18px; padding: 36px 40px;
+    display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+  .book h2 { color: #fff; margin-bottom: 10px; }
+  .book p { margin: 0 0 6px; font-size: 17px; }
+  .book .contact { margin: 12px 0 14px; font: 600 19px/1.6 var(--sans); }
+  .steps { list-style: none; counter-reset: s; margin: 12px 0 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 38px; margin: 0 0 12px; font-size: 16px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; color: var(--sea); font: 700 14px/26px var(--sans); text-align: center; }
+  .steps .contact { display: block; margin: 6px 0 0; }
+  .book .aside { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.3); font-size: 15px; opacity: .95; }
+  .book .aside a { color: #fff; font-style: normal; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); overflow-wrap: anywhere; }
+  .more { margin: 0; }
+  .more + .more { margin-top: 10px; }
+  .more.warn { font-size: .93em; color: var(--muted); }
+  .more a { color: var(--sea); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+  .book .contact a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.5); }
+  .tag { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); border-radius: 14px; padding: 18px 22px; text-align: center; min-width: 190px; }
+  .tag small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+  .tag strong { display: block; font: 600 26px/1.25 var(--serif); }
+  .tag + .tag { margin-top: 10px; }
+
+  .lang { position: absolute; top: 18px; right: 20px; z-index: 2; display: flex; gap: 4px;
+    background: rgba(0,0,0,.35); border-radius: 999px; padding: 4px; font: 600 13px/1 var(--sans); }
+  .lang a, .lang span { color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 999px; }
+  .lang span { background: #fff; color: var(--ink); }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 16px; }
+    h1 br { display: none; }
+    h1 { font-size: 32px; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .cols, .amen, .book { grid-template-columns: 1fr; }
+    .book { padding: 28px 22px; }
+    .book > div { min-width: 0; }
+    .book .contact { font-size: 16px; }
+    .book .contact a { overflow-wrap: anywhere; }
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
+    .g-salon, .g-cocina, .g-dorm1, .g-dorm2, .g-terraza { grid-column: span 2; grid-row: span 2; }
+    .g-salon { grid-row: span 3; }
+    .g-dorm1 { grid-row: span 4; }
+  }
+
+  /* PDF / impresión: A4, tres páginas */
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: var(--paper); font-size: 14px; }
+    .wrap { max-width: none; padding: 0 16mm; }
+    .hero { height: 140mm; min-height: 0; }
+    .hero-text { padding-bottom: 22mm; }
+    h1 { font-size: 44px; }
+    .facts { margin-top: -12mm; box-shadow: none; }
+    section { padding-top: 10mm; }
+    h2 { font-size: 24px; margin-bottom: 10px; }
+    .lead { font-size: 16px; }
+    .cols { gap: 9mm; }
+    .page { break-before: page; padding-top: 12mm; }
+    .gallery { grid-auto-rows: 25.5mm; gap: 3mm; }
+    .amen li { padding: 1px 0 1px 16px; }
+    .amen li::before { top: 9px; }
+    .book { margin-top: 6mm; padding: 6mm 10mm; break-inside: avoid; }
+    .page .cols { padding-top: 7mm; }
+    .book h2 { margin-bottom: 6px; }
+    .book p { font-size: 14.5px; margin-bottom: 4px; }
+    .book .contact { font-size: 16px; margin: 6px 0 8px; }
+    .steps { margin-top: 6px; }
+    .steps li { font-size: 14px; margin-bottom: 7px; padding-left: 32px; }
+    .steps li::before { width: 22px; height: 22px; font-size: 12px; line-height: 22px; }
+    .book .aside { font-size: 13.5px; margin-top: 10px; padding-top: 9px; }
+    .tag { padding: 12px 18px; }
+    .note, .amen > div { break-inside: avoid; }
+    footer { padding: 4mm 0 0; }
+    .lang { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/terraza-piscina.jpg" alt="The apartment's private terrace overlooking the Granada Park pool">
+  <div class="hero-text">
+    <div class="wrap">
+      <p class="eyebrow">Apartment S06 · Granada Park complex</p>
+      <h1>Holiday rental in <br>South Tenerife – Los Cristianos</h1>
+      <p class="sub">A bright two-bedroom apartment with a private terrace and direct access to the pool.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="facts">
+    <div class="fact"><b>2</b><span>bedrooms</span></div>
+    <div class="fact"><b>1</b><span>full bathroom</span></div>
+    <div class="fact"><b>Terrace</b><span>private, with direct pool access</span></div>
+    <div class="fact"><b>Renovated</b><span>new kitchen and finishes</span></div>
+  </div>
+
+  <section class="cols">
+    <div>
+      <h2>Your home in the south of Tenerife</h2>
+      <p class="lead">A spacious, bright, renovated two-bedroom apartment in the Granada Park complex, one of the most sought-after areas in the south of Tenerife. It stands out for its layout, space and comfort: ideal for a relaxing holiday.</p>
+      <p>It has two spacious bedrooms, one with a built-in wardrobe, a full bathroom, a fully equipped kitchen and a bright living room that opens onto a pleasant private terrace with direct access to the pool, perfect for relaxing and enjoying the island's climate all year round.</p>
+      <p>Its location gives easy access to restaurants, shops and some of the best beaches in the south of the island.</p>
+    </div>
+    <div class="note">
+      <h3>The complex</h3>
+      <ul>
+        <li>Two adult pools and a children's pool</li>
+        <li>Beautifully kept gardens</li>
+        <li>Mini golf</li>
+        <li>Games area with billiards and table tennis</li>
+        <li>Sun terrace</li>
+        <li>24-hour reception</li>
+        <li>Quiet, family-friendly atmosphere</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>The apartment</h2>
+    <div class="gallery">
+      <figure class="g-salon"><img src="img/salon.jpg" alt="Living and dining room with sofa and table"><figcaption>Living room</figcaption></figure>
+      <figure class="g-cocina"><img src="img/cocina.jpg" alt="Equipped kitchen with oven and hob"><figcaption>Equipped kitchen</figcaption></figure>
+      <figure class="g-dorm1"><img src="img/dormitorio-1.jpg" alt="Main bedroom with built-in wardrobe"><figcaption>Bedroom 1</figcaption></figure>
+      <figure class="g-dorm2"><img src="img/dormitorio-2.jpg" alt="Second bedroom with two beds"><figcaption>Bedroom 2</figcaption></figure>
+      <figure class="g-terraza"><img src="img/terraza.jpg" alt="Private terrace with table and chairs and direct pool access"><figcaption>Private terrace</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>Location and terms</h2>
+    <section class="cols">
+      <div class="note">
+        <h3>Location</h3>
+        <ul>
+          <li><b>Los Cristianos and Las Vistas beaches:</b> 5 min by car</li>
+          <li><b>Mercadona:</b> close by, Parque Santiago VI shopping centre</li>
+          <li><b>Siam Park and Siam Mall:</b> 5 min by car</li>
+          <li><b>Las Américas leisure area:</b> 10 min by car</li>
+          <li><b>Golf:</b> Las Américas (5 min), Costa Adeje, Golf del Sur and Amarilla (15–20 min)</li>
+          <li><b>Los Cristianos harbour:</b> ferries to La Gomera</li>
+          <li><b>Tenerife South airport:</b> 15 min by car or direct bus (stop 15 min on foot)</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h3>Rental management</h3>
+        <p class="more">The apartment is managed by a local rental company, which handles prices, payments, check-in and check-out.</p>
+        <h3 style="margin-top:16px">Indicative prices</h3>
+        <ul>
+          <li><b>Low season:</b> from approx. €90/night</li>
+          <li><b>High season:</b> up to approx. €145/night</li>
+          <li><b>Minimum stay:</b> 3 nights</li>
+        </ul>
+        <p class="more warn">The final price depends on the dates and is confirmed by the rental company.</p>
+      </div>
+    </section>
+
+    <div class="book">
+      <div>
+        <h2>How to book</h2>
+        <ol class="steps">
+          <li><b>Email Miguel with your dates:</b>
+            <span class="contact"><a href="mailto:miguel.herrero-collantes@eeas.europa.eu?subject=Apartment%20S06">miguel.herrero-collantes@eeas.europa.eu</a></span></li>
+          <li><b>Miguel puts you in touch with the rental company</b>, which confirms availability and price.</li>
+          <li><b>When booking, ask specifically for apartment S06.</b> The company manages several apartments in the complex and they are not all the same.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="tag"><small>Apartment</small><strong>S06</strong></div>
+        <div class="tag"><small>Contact</small><strong>Miguel</strong></div>
+      </div>
+    </div>
+
+    <footer>Apartment S06 · Granada Park complex · South Tenerife</footer>
+  </section>
+</main>
+
+</body>
+</html>
